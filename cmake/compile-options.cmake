@@ -22,3 +22,9 @@ target_compile_options(
   -Wdouble-promotion
   -Wformat=2
 )
+
+target_compile_features(
+  compile-options
+  INTERFACE
+  cxx_std_20
+)

@@ -1,6 +1,6 @@
 find_package(Catch2)
 add_library(catch-main catch_main.cpp)
-target_link_libraries(catch-main Catch2::Catch2)
+target_link_libraries(catch-main Catch2::Catch2 compile-options)
 
 add_executable(tests main.cpp)
 
