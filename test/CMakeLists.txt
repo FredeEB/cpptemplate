@@ -4,10 +4,7 @@ target_link_libraries(catch-main Catch2::Catch2 compile-options)
 
 add_executable(tests main.cpp)
 
-### SANITIZERS
-target_link_libraries(tests PUBLIC -fsanitize=address,undefined)
-target_compile_options(tests PUBLIC -fsanitize=address,undefined)
-
+add_sanitizer_options(tests)
 target_link_libraries(tests PUBLIC catch-main)
 include(CTest)
 include(Catch)
