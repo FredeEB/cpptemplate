@@ -23,6 +23,12 @@ target_compile_options(
   -Wformat=2
 )
 
+target_compile_options(
+    compile-options
+    INTERFACE
+    -fdiagnostics-color=always
+    )
+
 target_compile_features(
   compile-options
   INTERFACE
