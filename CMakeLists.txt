@@ -18,5 +18,8 @@ option(BUILD_TESTING "Build unittests" ON)
 if(BUILD_TESTING)
   enable_testing()
   add_subdirectory(test)
+option(BUILD_DOCS "Build doxygen docs" OFF)
+if (BUILD_DOCS)
+    add_subdirectory(doc)
 endif()
 
