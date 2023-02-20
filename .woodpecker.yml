@@ -1,0 +1,19 @@
+pipeline:
+  docker-image:
+    image: docker
+    commands:
+      - docker build -t fredeb/cpp-template .
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  build:
+    image: fredeb/make-modular
+    commands:
+      - cmake .
+        -B ci-build 
+        -GNinja 
+        -DBUILD_TESTING=ON 
+        -DBUILD_DOCS=ON 
+        -DENABLE_ASAN_FOR_TESTS=OFF 
+        -DENABLE_ASAN_FOR_PROG=OFF 
+      - cmake --build ci-build -t all
