@@ -7,7 +7,7 @@ pipeline:
       - /var/run/docker.sock:/var/run/docker.sock
 
   build:
-    image: fredeb/make-modular
+    image: fredeb/cpp-template
     commands:
       - cmake .
         -B ci-build 
