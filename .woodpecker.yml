@@ -17,3 +17,8 @@ pipeline:
         -DENABLE_ASAN_FOR_TESTS=OFF 
         -DENABLE_ASAN_FOR_PROG=OFF 
       - cmake --build ci-build -t all
+
+  test:
+    image: fredeb/cpp-template
+    commands:
+      - cmake --build ci-build -t check
