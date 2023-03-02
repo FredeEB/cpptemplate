@@ -2,4 +2,4 @@ FROM alpine:latest
 
 WORKDIR /app
 
-RUN apk add catch2 cmake doxygen g++ gcc ninja
+RUN apk add catch2 cmake doxygen g++ gcc graphviz ninja
