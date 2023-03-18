@@ -12,6 +12,6 @@ include(Catch)
 catch_discover_tests(tests)
 
 add_custom_target(
-  check COMMAND ${CMAKE_CTEST_COMMAND}
+  check COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure
   DEPENDS tests
 )
