@@ -2,7 +2,7 @@ pipeline:
   docker-image:
     image: docker
     commands:
-      - docker build -t fredeb/cpp-template .
+      - docker buildx build -t fredeb/cpp-template .
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 
