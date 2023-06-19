@@ -14,8 +14,6 @@ pipeline:
         -GNinja 
         -DBUILD_TESTING=ON 
         -DBUILD_DOCS=ON 
-        -DENABLE_ASAN_FOR_TESTS=OFF 
-        -DENABLE_ASAN_FOR_PROG=OFF 
       - cmake --build ci-build -t all
 
   test:

@@ -1,5 +1,6 @@
-FROM alpine:latest
+FROM ubuntu:latest
 
 WORKDIR /app
 
-RUN apk add catch2 cmake doxygen g++ gcc graphviz ninja
+RUN apt update -y
+RUN apt install -y build-essential catch2 cmake doxygen graphviz ninja-build
